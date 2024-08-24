@@ -1,0 +1,10 @@
+.app-header {
+    text-align: center;
+    margin: 20px 0; /* Dodaje przestrzeń nad i pod nagłówkiem */
+  }
+  
+  .app-header h1 {
+    font-size: 2.5rem; /* Ustaw większą czcionkę */
+    font-weight: bold; /* Pogrubienie tekstu */
+  }
+  

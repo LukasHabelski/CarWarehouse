@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres-container
+    environment:
+      POSTGRES_DB: CarWarehouse
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql  # Montuj plik init.sql
+    networks:
+      - my-network
+
+  api:
+    build:
+      context: ./CarWarehouseAPI
+      dockerfile: Dockerfile.api
+    container_name: api-container
+    ports:
+      - "5000:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=CarWarehouse;Username=postgres;Password=admin
+    depends_on:
+      - postgres
+    networks:
+      - my-network
+
+  frontend:
+    build:
+      context: ./carwarehouse-frontend
+      dockerfile: Dockerfile.frontend
+    container_name: frontend-container
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge

@@ -1,0 +1,123 @@
+/* Globalne style */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f9ff; /* Jasny, stonowany niebieski */
+}
+
+/* Nawigacja */
+nav {
+  background-color: #003366; /* Ciemny niebieski */
+  color: white;
+  padding: 15px 30px;
+  text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Wyśrodkowanie elementów listy */
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Kontener */
+.container {
+  width: 70%;
+  margin: auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Wyśrodkowanie tekstu w kontenerze */
+}
+
+/* Formulary */
+form {
+  background-color: #ffffff; /* Białe tło formularza */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 500px; /* Maksymalna szerokość formularza */
+}
+
+/* Etykiety */
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: #333; /* Ciemny szary */
+}
+
+/* Pola tekstowe */
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Przycisk */
+button {
+  background-color: #0056b3; /* Intensywny niebieski */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 5px; /* Odstępy między przyciskami */
+}
+
+button:hover {
+  background-color: #004494; /* Ciemniejszy niebieski na hover */
+}
+
+/* Nagłówki */
+h2 {
+  margin-top: 0;
+  color: #003366; /* Ciemny niebieski */
+}
+
+/* Lista */
+ul {
+  list-style-type: none; /* Usunięcie kropek z listy */
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+  border-bottom: none; /* Usunięcie dolnej ramki dla ostatniego elementu */
+}
+
+/* Przycisk edycji i usuwania */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Odstęp między przyciskami */
+}
