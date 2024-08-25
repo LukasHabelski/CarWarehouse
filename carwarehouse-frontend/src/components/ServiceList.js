@@ -61,6 +61,8 @@ function ServiceList({ userRole }) {  // Dodajemy userRole jako prop
     setNewServicePrice(service.price);
   };
 
+  console.log('User Role:', userRole); // Debugowanie roli użytkownika
+
   return (
     <div>
       <h2>Service List</h2>

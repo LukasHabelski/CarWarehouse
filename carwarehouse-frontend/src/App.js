@@ -26,7 +26,7 @@ function App() {
             <Route path="/" element={<StartScreen setUserRole={setUserRole} setUserId={setUserId} />} /> {/* Przekaż setUserRole i setUserId */}
             {userRole === 'admin' && <Route path="/clients" element={<ClientList />} />}
             {userRole === 'admin' && <Route path="/add-client" element={<AddClient />} />}
-            <Route path="/services" element={<ServiceList />} />
+            <Route path="/services" element={<ServiceList userRole={userRole}/>} />
             {userRole === 'admin' && <Route path="/add-service" element={<AddService />} />}
             <Route path="/appointments" element={<AppointmentList userRole={userRole} />} /> {/* Przekaż userRole */}
             <Route path="/add-appointment" element={<AddAppointment userId={userId} />} /> {/* Przekaż userId */}
