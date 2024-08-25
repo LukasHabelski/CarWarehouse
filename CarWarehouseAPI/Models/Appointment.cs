@@ -7,5 +7,6 @@ namespace CarWarehouseAPI.Models
         public bool IsBooked { get; set; }
         public string CustomerName { get; set; }
         public string ServiceType { get; set; }
+
     }
 }

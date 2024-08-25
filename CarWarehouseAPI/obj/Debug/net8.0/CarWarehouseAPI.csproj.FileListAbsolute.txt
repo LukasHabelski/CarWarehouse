@@ -137,3 +137,4 @@ C:\Users\lhabe\Desktop\CarWarehouse\CarWarehouseAPI\obj\Debug\net8.0\CarWarehous
 C:\Users\lhabe\Desktop\CarWarehouse\CarWarehouseAPI\obj\Debug\net8.0\ref\CarWarehouseAPI.dll
 C:\Users\lhabe\Desktop\CarWarehouse\CarWarehouseAPI\bin\Debug\net8.0\Npgsql.dll
 C:\Users\lhabe\Desktop\CarWarehouse\CarWarehouseAPI\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\lhabe\Desktop\CarWarehouse\CarWarehouseAPI\obj\Debug\net8.0\CarWarehouseAPI.sourcelink.json

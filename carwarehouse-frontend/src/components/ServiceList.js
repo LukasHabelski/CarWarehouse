@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../App.css';  // Import globalnych stylów
 
-function ServiceList() {
+function ServiceList({ userRole }) {  // Dodajemy userRole jako prop
   const [services, setServices] = useState([]);
   const [selectedService, setSelectedService] = useState(null);
   const [newServiceName, setNewServiceName] = useState('');
@@ -68,15 +68,18 @@ function ServiceList() {
         {services.map(service => (
           <li key={service.id}>
             {service.name} - {service.description} - {service.price} PLN
-            <div className="button-container">
-              <button onClick={() => handleServiceSelect(service)}>Edit 📝</button>
-              <button onClick={() => handleDelete(service.id)}>Delete 🗑️</button>
-            </div>
+            {/* Przyciski są widoczne tylko dla administratora */}
+            {userRole === 'admin' && (
+              <div className="button-container">
+                <button onClick={() => handleServiceSelect(service)}>Edit 📝</button>
+                <button onClick={() => handleDelete(service.id)}>Delete 🗑️</button>
+              </div>
+            )}
           </li>
         ))}
       </ul>
 
-      {selectedService && (
+      {userRole === 'admin' && selectedService && (
         <div>
           <h3>Edit Service</h3>
           <input 
